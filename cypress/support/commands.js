@@ -11,7 +11,16 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-//
+import { elements as el}  from "./../pages/login/elements.js"
+Cypress.Commands.add('login', (usuario) => {
+    cy.visit('https://beta.autocenterapp.com/')
+    cy.get(el.toggleButton).click()
+    cy.xpath(el.loginBotton).click()
+    cy.get(el.emailInput).type(usuario.email)
+    cy.get(el.passwordInput).type(usuario.senha)
+    cy.get(el.submitButton).click()
+})
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
