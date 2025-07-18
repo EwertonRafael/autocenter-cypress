@@ -21,6 +21,12 @@ Cypress.Commands.add('login', (usuario) => {
     cy.get(el.submitButton).click()
 })
 
+// -- This is a access page --
+Cypress.Commands.add('goto', (btnName, titlePage) => {
+    cy.contains('button', btnName).should('be.visible').click()
+
+    cy.contains('h1', titlePage).should('be.visible')
+})
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
