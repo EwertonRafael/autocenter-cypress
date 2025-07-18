@@ -1,5 +1,5 @@
-import criarOrcamento from '../../pages/orcamento-ewerton'
-import filtrarOrcamento from '../../pages/filtrarOrcamento-Ewerton'
+import criarOrcamento from '../../pages/orcamento-pages-Ewerton/criar'
+import filtrarOrcamento from '../../pages/orcamento-pages-Ewerton/filtrar'
 
 
 // Ignora erros da aplicação causados por OneSignal ou iframes
